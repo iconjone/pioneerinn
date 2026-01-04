@@ -31,7 +31,7 @@
     
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
         
         .hero-bg {
             background-image: linear-gradient(rgba(26, 58, 50, 0.7), rgba(26, 58, 50, 0.7)), url('assets/16.jpg');
@@ -58,12 +58,20 @@
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .snap-x {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        .snap-center {
+            scroll-snap-align: center;
+        }
     </style>
 </head>
 <body class="bg-sage text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-forest/5">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-forest/5 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center">
@@ -77,7 +85,7 @@
                     <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="text-booking hover:opacity-75 transition">Book Online</a>
                 </div>
 
-                <a href="tel:5618556055" class="bg-forest text-white px-5 py-2.5 rounded shadow-lg text-xs font-bold hover:bg-gold transition-all flex items-center gap-2">
+                <a href="tel:5618556055" class="bg-forest text-white px-5 py-2.5 rounded shadow-lg text-xs font-bold hover:bg-gold transition-all flex items-center gap-2 uppercase tracking-tighter">
                     561-855-6055
                 </a>
             </div>
@@ -87,32 +95,42 @@
     <!-- Hero Section -->
     <header class="relative h-screen flex items-center justify-center hero-bg">
         <div class="text-center text-white px-4 max-w-4xl mt-12">
-            <h2 class="text-gold italic font-serif text-2xl mb-4 text-shadow">Elegance & Excellence</h2>
-            <h1 class="text-5xl md:text-8xl font-bold mb-8 leading-tight">Your Retreat in <br><span class="text-sage font-light">Florida</span></h1>
+            <h2 class="text-gold italic font-serif text-2xl mb-4">Quiet. Clean. Convenient.</h2>
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 leading-tight text-white">Your Retreat in <br><span class="text-sage font-light tracking-tight">Florida</span></h1>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="bg-gold text-forest px-10 py-4 font-bold tracking-widest text-xs uppercase hover:bg-white transition-all shadow-xl">
-                    Book on Booking.com
+                    Book Online
                 </a>
                 <a href="tel:5618556055" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 font-bold tracking-widest text-xs uppercase hover:bg-forest transition-all">
-                    Call Direct For Rates
+                    Call direct for better rates
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-20 items-center">
             <div class="space-y-6">
                 <span class="text-gold font-bold tracking-[0.3em] uppercase text-xs">Pioneer Inn</span>
                 <h2 class="text-4xl md:text-5xl text-forest font-bold leading-tight italic">Charm Meets <br>Modern Convenience</h2>
                 <p class="text-slate-600 leading-loose text-lg">
-                    The right choice for visitors searching for a combination of charm and a convenient position from where to explore surroundings. 
-                    We provide high-quality comfort with a focus on personal service.
+                    Pioneer Inn is the right choice for visitors who are searching for a combination of charm and a convenient position from where to explore surroundings.
                 </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-2 border-t border-slate-100 pt-6 text-sm text-forest font-semibold uppercase tracking-tighter">
+                    <div class="flex items-center gap-3"><span class="text-gold text-xl">●</span> Palm Beach County Central</div>
+                    <div class="flex items-center gap-3"><span class="text-gold text-xl">●</span> Near South FL Fairgrounds</div>
+                    <div class="flex items-center gap-3"><span class="text-gold text-xl">●</span> 24-Hour Front Desk</div>
+                    <div class="flex items-center gap-3"><span class="text-gold text-xl">●</span> Free Private Parking</div>
+                </div>
+
                 <div class="flex items-center gap-4 p-6 bg-sage/30 border-l-4 border-gold rounded-r-lg">
                     <img src="assets/PioneerInnSmokeFreeHotel.png" class="h-12 w-auto grayscale brightness-50" alt="Smoke Free">
-                    <p class="text-sm font-bold text-forest uppercase tracking-tighter">100% Smoke-Free Property</p>
+                    <div>
+                        <p class="text-[10px] font-bold text-forest uppercase tracking-widest">Property Standard</p>
+                        <p class="text-sm font-bold text-forest italic">100% Smoke-Free Guest Rooms</p>
+                    </div>
                 </div>
             </div>
             <div class="relative gallery-container">
@@ -121,106 +139,287 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-24 bg-sage/20">
+    <!-- Amenities Grid (RE-ADDED) -->
+    <section id="amenities" class="py-24 bg-forest text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-2">Suite Features</h2>
+            <div class="w-20 h-1 bg-gold mx-auto"></div>
+        </div>
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-forest mb-2">Gallery</h2>
-                <div class="w-20 h-1 bg-gold mx-auto"></div>
-            </div>
+            <div class="grid lg:grid-cols-3 gap-16">
+                <!-- Feature Box 1 -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-serif text-gold italic">Comfortable Accommodations</h3>
+                    <p class="text-slate-400 text-sm leading-loose">
+                        Our rooms offer clean, modern living with inner courtyard views. Each suite is designed for tranquility and high-quality rest.
+                    </p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Air Conditioning</span> <span class="text-gold font-bold uppercase tracking-widest">Yes</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Walk-in Showers</span> <span class="text-gold font-bold uppercase tracking-widest">Yes</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>HD TV Channels</span> <span class="text-gold font-bold uppercase tracking-widest">Yes</span></li>
+                    </ul>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery-container">
-                <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl shadow-xl">
-                    <img src="assets/Lobby4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Lobby Lounge">
+                <!-- Feature Box 2 -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-serif text-gold italic">In-Room Amenities</h3>
+                    <p class="text-slate-400 text-sm leading-loose">
+                        Every room is equipped with the essentials for short or long-term stays, ensuring a home-away-from-home experience.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-4 rounded text-center">
+                            <p class="text-xs uppercase font-bold text-gold mb-1">Kitchen</p>
+                            <p class="text-xs">Refrigerator & Microwave</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded text-center border border-gold/20">
+                            <p class="text-xs uppercase font-bold text-gold mb-1">Bath</p>
+                            <p class="text-xs">Private Bath & Shower</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded text-center col-span-2 border border-gold/20">
+                            <p class="text-xs uppercase font-bold text-gold mb-1">Connectivity</p>
+                            <p class="text-xs">High-Speed Fiber WiFi (Free)</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
-                    <img src="assets/21.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Bathroom Interior">
-                </div>
-                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
-                    <img src="assets/20.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Guest Room">
-                </div>
-                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
-                    <img src="assets/13.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Bedroom View">
-                </div>
-                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
-                    <img src="assets/18.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Inn Architecture">
-                </div>
-            </div>
 
-            <div class="mt-8 flex gap-4 overflow-x-auto pb-6 no-scrollbar gallery-container">
-                <img src="assets/1.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
-                <img src="assets/3.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
-                <img src="assets/5.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
-                <img src="assets/8.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
-                <img src="assets/Lobby3.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
-                <img src="assets/MG_4196.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+                <!-- Feature Box 3 -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-serif text-gold italic">Essential Facilities</h3>
+                    <p class="text-slate-400 text-sm leading-loose">
+                        We provide the infrastructure to make your trip seamless, from arrival to departure.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-gold rounded-full"></div> Guest Elevator Access</div>
+                        <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-gold rounded-full"></div> Bicycle Parking</div>
+                        <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-gold rounded-full"></div> 24-Hour Front Desk Support</div>
+                        <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-gold rounded-full"></div> Private On-Site Parking (Free)</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking CTA -->
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-sage/30 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-forest mb-2">Gallery</h2>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Layout 1: Featured Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery-container mb-16">
+                <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl shadow-xl">
+                    <img src="assets/Lobby4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Main Lobby">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-lg h-64">
+                    <img src="assets/21.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Bathrooms">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-lg h-64">
+                    <img src="assets/20.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Room Interior">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-lg h-64">
+                    <img src="assets/13.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Suites">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-lg h-64">
+                    <img src="assets/18.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Property Detail">
+                </div>
+            </div>
+
+            <!-- Layout 2: HORIZONTAL SCROLLING STRIP -->
+            <div class="relative group">
+                <h3 class="text-forest font-serif italic text-2xl mb-6 ml-2 uppercase tracking-widest text-sm font-bold opacity-60">Explore More</h3>
+                
+                <!-- Nav Buttons -->
+                <button onclick="scrollGallery(-400)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-3 rounded-full shadow-xl text-forest hover:bg-gold hover:text-white transition-all -ml-5 opacity-0 group-hover:opacity-100 hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button onclick="scrollGallery(400)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-3 rounded-full shadow-xl text-forest hover:bg-gold hover:text-white transition-all -mr-5 opacity-0 group-hover:opacity-100 hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Scroll Container -->
+                <div id="scrollContainer" class="flex gap-4 overflow-x-auto no-scrollbar snap-x gallery-container">
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/1.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/2.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/3.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/5.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/6.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/7.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/8.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/10.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/11.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/12.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/14.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/15.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/17.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/19.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/22.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/Lobby2.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/Lobby3.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+                        <img src="assets/MG_4196.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Convenient Access (Restored Section) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-forest mb-8">Convenient Access</h2>
+                    <p class="text-slate-600 mb-10 leading-loose">
+                        Our property is perfectly situated for travelers. With easy access to the
+                        <strong>Florida Turnpike</strong>, <strong>I-95</strong>, and
+                        <strong>Palm Beach International Airport</strong>, reaching us is effortless.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-sage/40 rounded border-b border-gold/20">
+                            <span class="font-bold text-forest">Palm Beach International (PBI)</span>
+                            <span class="text-gold font-bold">6.2 mi</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-sage/40 rounded border-b border-gold/20">
+                            <span class="font-bold text-forest">Gulfstream Mall</span>
+                            <span class="text-gold font-bold">6.2 mi</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-sage/40 rounded border-b border-gold/20">
+                            <span class="font-bold text-forest">Palm Beach Kennel Club</span>
+                            <span class="text-gold font-bold">9.3 mi</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-sage/40 rounded border-b border-gold/20">
+                            <span class="font-bold text-forest">Wellington Polo Club</span>
+                            <span class="text-gold font-bold uppercase text-[10px] tracking-widest">Short Drive</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-sage/40 rounded border-b border-gold/20">
+                            <span class="font-bold text-forest">Dreher Park Zoo</span>
+                            <span class="text-gold font-bold uppercase text-[10px] tracking-widest">Short Drive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white h-[500px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7129.978330089814!2d-80.193458!3d26.680829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d92ff4580a57b3%3A0x74f34c66a5aeb98!2sPioneer%20Inn!5e0!3m2!1sen!2sus!4v1767505901789!5m2!1sen!2sus" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Booking Section (Restored) -->
     <section class="py-24 bg-gold text-forest text-center px-4">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 italic font-serif text-white">Reserve Your Stay</h2>
-        <p class="text-sm font-bold tracking-[0.3em] uppercase mb-12">Convenient booking options for our guests</p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center items-center font-bold">
-            <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="bg-booking text-white px-12 py-5 rounded shadow-2xl text-xl hover:scale-105 transition-transform flex items-center gap-3">
+        <p class="text-sm font-bold tracking-[0.3em] uppercase mb-12 text-forest">Direct rates available via phone</p>
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="bg-booking text-white px-12 py-5 rounded shadow-2xl text-xl font-bold hover:scale-105 transition-transform flex items-center gap-3">
                 Booking.com
             </a>
-            <a href="tel:5618556055" class="bg-forest text-white px-12 py-5 rounded shadow-2xl text-xl hover:scale-105 transition-transform">
+            <a href="tel:5618556055" class="bg-forest text-white px-12 py-5 rounded shadow-2xl text-xl font-bold hover:scale-105 transition-transform">
                 Call Direct
             </a>
         </div>
     </section>
 
-    <!-- Location Footer -->
-    <footer class="bg-white pt-24 pb-10 border-t border-forest/5">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 mb-20">
+    <!-- Footer -->
+    <footer id="contact" class="bg-white pt-24 pb-10 border-t border-forest/5">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 mb-20 text-forest">
             <div class="space-y-6">
                 <img src="assets/Logo.png" alt="Logo" class="h-12">
-                <h3 class="text-2xl font-bold text-forest uppercase tracking-tight">Pioneer Inn</h3>
-                <p class="text-slate-600 text-lg">
-                    9121 Southern Blvd<br>
-                    Royal Palm Beach, FL 33411<br>
-                    United States
-                </p>
-                <a href="https://www.google.com/maps/dir//9121+Southern+Blvd,+Royal+Palm+Beach,+FL+33411/" target="_blank" class="inline-block text-gold font-bold text-xs tracking-widest hover:underline uppercase">Get Directions</a>
+                <h3 class="text-2xl font-bold uppercase tracking-tight">Pioneer Inn Florida</h3>
+                <div class="text-slate-600 text-lg leading-relaxed">
+                    <p>9121 Southern Blvd</p>
+                    <p>Royal Palm Beach, FL 33411</p>
+                    <p>United States</p>
+                </div>
+                <a href="tel:5618556055" class="text-xl font-bold hover:text-gold transition block underline">561-855-6055</a>
             </div>
-            <!-- UPDATED MAP: Grayscale removed as requested -->
-            <div class="rounded-2xl overflow-hidden h-[400px] shadow-2xl border border-forest/5">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7129.978330089814!2d-80.193458!3d26.680829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d92ff4580a57b3%3A0x74f34c66a5aeb98!2sPioneer%20Inn!5e0!3m2!1sen!2sus!4v1767505901789!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div class="space-y-6 text-sm text-slate-500">
+                <p class="italic leading-loose">High-quality comfort since 2020. Our clean rooms, inner courtyard views, and 24-hour service team are ready to welcome you to Palm Beach County.</p>
+                <div class="w-20 h-px bg-gold"></div>
+                <a href="https://www.google.com/maps/dir//9121+Southern+Blvd,+Royal+Palm+Beach,+FL+33411/" target="_blank" class="font-bold text-gold tracking-[0.2em] uppercase hover:underline inline-flex items-center gap-2">
+                    Get Directions 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
             </div>
         </div>
         <p class="text-center text-slate-400 text-[10px] tracking-[0.4em] uppercase font-bold border-t border-slate-100 pt-10">
-            &copy; 2026 Pioneer Inn • Royal Palm Beach, Florida
+            &copy; 2026 Pioneer Inn • All Rights Reserved
         </p>
     </footer>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4" onclick="closeModal()">
+    <!-- Image Modal (Lightbox) -->
+    <div id="imageModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 cursor-zoom-out" onclick="closeModal()">
         <button class="absolute top-6 right-6 text-white text-5xl hover:text-gold transition-colors" onclick="closeModal()">&times;</button>
-        <img id="modalImg" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-4 border-white/10" onclick="event.stopPropagation()">
+        <img id="modalImg" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-4 border-white/10 cursor-default" onclick="event.stopPropagation()">
     </div>
 
     <script>
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
+        const scrollContainer = document.getElementById('scrollContainer');
+        
         function openModal(src) {
             modalImg.src = src;
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
+
         function closeModal() {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+
+        function scrollGallery(amount) {
+            scrollContainer.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
         document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
     </script>
 
