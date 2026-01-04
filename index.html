@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pioneer Inn | Elegance & Comfort in Royal Palm Beach</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#1a3a32',
+                        moss: '#2d5a4c',
+                        sage: '#f1f5f2',
+                        gold: '#d4af37',
+                        booking: '#003580',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(26, 58, 50, 0.7), rgba(26, 58, 50, 0.7)), url('assets/16.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #imageModal {
+            display: none;
+            background: rgba(26, 58, 50, 0.98);
+            backdrop-filter: blur(12px);
+        }
+
+        .gallery-container img {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .gallery-container img:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.1);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-sage text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-forest/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <img src="assets/Logo.png" alt="Pioneer Inn" class="h-10 w-auto">
+                </div>
+                
+                <div class="hidden md:flex space-x-8 font-semibold uppercase text-[10px] tracking-[0.2em] text-forest">
+                    <a href="#about" class="hover:text-gold transition">About</a>
+                    <a href="#gallery" class="hover:text-gold transition">Gallery</a>
+                    <a href="#amenities" class="hover:text-gold transition">Amenities</a>
+                    <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="text-booking hover:opacity-75 transition">Book Online</a>
+                </div>
+
+                <a href="tel:5618556055" class="bg-forest text-white px-5 py-2.5 rounded shadow-lg text-xs font-bold hover:bg-gold transition-all flex items-center gap-2">
+                    561-855-6055
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center hero-bg">
+        <div class="text-center text-white px-4 max-w-4xl mt-12">
+            <h2 class="text-gold italic font-serif text-2xl mb-4 text-shadow">Elegance & Excellence</h2>
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 leading-tight">Your Retreat in <br><span class="text-sage font-light">Florida</span></h1>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="bg-gold text-forest px-10 py-4 font-bold tracking-widest text-xs uppercase hover:bg-white transition-all shadow-xl">
+                    Book on Booking.com
+                </a>
+                <a href="tel:5618556055" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 font-bold tracking-widest text-xs uppercase hover:bg-forest transition-all">
+                    Call Direct For Rates
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-6">
+                <span class="text-gold font-bold tracking-[0.3em] uppercase text-xs">Pioneer Inn</span>
+                <h2 class="text-4xl md:text-5xl text-forest font-bold leading-tight italic">Charm Meets <br>Modern Convenience</h2>
+                <p class="text-slate-600 leading-loose text-lg">
+                    The right choice for visitors searching for a combination of charm and a convenient position from where to explore surroundings. 
+                    We provide high-quality comfort with a focus on personal service.
+                </p>
+                <div class="flex items-center gap-4 p-6 bg-sage/30 border-l-4 border-gold rounded-r-lg">
+                    <img src="assets/PioneerInnSmokeFreeHotel.png" class="h-12 w-auto grayscale brightness-50" alt="Smoke Free">
+                    <p class="text-sm font-bold text-forest uppercase tracking-tighter">100% Smoke-Free Property</p>
+                </div>
+            </div>
+            <div class="relative gallery-container">
+                <img src="assets/Lobby1.jpg" onclick="openModal(this.src)" alt="Lobby" class="rounded-xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-sage/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-forest mb-2">Gallery</h2>
+                <div class="w-20 h-1 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery-container">
+                <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl shadow-xl">
+                    <img src="assets/Lobby4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Lobby Lounge">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
+                    <img src="assets/21.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Bathroom Interior">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
+                    <img src="assets/20.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Guest Room">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
+                    <img src="assets/13.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Bedroom View">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-xl h-64">
+                    <img src="assets/18.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Inn Architecture">
+                </div>
+            </div>
+
+            <div class="mt-8 flex gap-4 overflow-x-auto pb-6 no-scrollbar gallery-container">
+                <img src="assets/1.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+                <img src="assets/3.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+                <img src="assets/5.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+                <img src="assets/8.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+                <img src="assets/Lobby3.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+                <img src="assets/MG_4196.jpg" onclick="openModal(this.src)" class="h-32 w-52 object-cover rounded-xl shadow flex-shrink-0">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="py-24 bg-gold text-forest text-center px-4">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 italic font-serif text-white">Reserve Your Stay</h2>
+        <p class="text-sm font-bold tracking-[0.3em] uppercase mb-12">Convenient booking options for our guests</p>
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center font-bold">
+            <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="bg-booking text-white px-12 py-5 rounded shadow-2xl text-xl hover:scale-105 transition-transform flex items-center gap-3">
+                Booking.com
+            </a>
+            <a href="tel:5618556055" class="bg-forest text-white px-12 py-5 rounded shadow-2xl text-xl hover:scale-105 transition-transform">
+                Call Direct
+            </a>
+        </div>
+    </section>
+
+    <!-- Location Footer -->
+    <footer class="bg-white pt-24 pb-10 border-t border-forest/5">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 mb-20">
+            <div class="space-y-6">
+                <img src="assets/Logo.png" alt="Logo" class="h-12">
+                <h3 class="text-2xl font-bold text-forest uppercase tracking-tight">Pioneer Inn</h3>
+                <p class="text-slate-600 text-lg">
+                    9121 Southern Blvd<br>
+                    Royal Palm Beach, FL 33411<br>
+                    United States
+                </p>
+                <a href="https://www.google.com/maps/dir//9121+Southern+Blvd,+Royal+Palm+Beach,+FL+33411/" target="_blank" class="inline-block text-gold font-bold text-xs tracking-widest hover:underline uppercase">Get Directions</a>
+            </div>
+            <!-- UPDATED MAP: Grayscale removed as requested -->
+            <div class="rounded-2xl overflow-hidden h-[400px] shadow-2xl border border-forest/5">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7129.978330089814!2d-80.193458!3d26.680829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d92ff4580a57b3%3A0x74f34c66a5aeb98!2sPioneer%20Inn!5e0!3m2!1sen!2sus!4v1767505901789!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <p class="text-center text-slate-400 text-[10px] tracking-[0.4em] uppercase font-bold border-t border-slate-100 pt-10">
+            &copy; 2026 Pioneer Inn • Royal Palm Beach, Florida
+        </p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4" onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white text-5xl hover:text-gold transition-colors" onclick="closeModal()">&times;</button>
+        <img id="modalImg" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-4 border-white/10" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        function openModal(src) {
+            modalImg.src = src;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
+    </script>
+
+</body>
+</html>
