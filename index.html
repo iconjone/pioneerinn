@@ -84,6 +84,7 @@
                     <a href="#about" class="hover:text-gold transition">About</a>
                     <a href="#gallery" class="hover:text-gold transition">Gallery</a>
                     <a href="#amenities" class="hover:text-gold transition">Amenities</a>
+                    <a href="#reviews" class="hover:text-gold transition">Reviews</a>
                     <a href="https://www.booking.com/hotel/us/pioneer-inn-west-palm-beach.html" target="_blank" class="text-booking hover:opacity-75 transition">Book Online</a>
                 </div>
 
@@ -144,7 +145,7 @@
         </div>
     </section>
 
-    <!-- Amenities Grid (RE-ADDED) -->
+    <!-- Amenities Grid -->
     <section id="amenities" class="py-24 bg-forest text-white">
         <div class="max-w-7xl mx-auto px-4 text-center mb-16">
             <h2 class="text-4xl font-bold text-white mb-2">Suite Features</h2>
@@ -212,7 +213,6 @@
                 <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
             </div>
 
-            <!-- Layout 1: Featured Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery-container mb-16">
                 <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl shadow-xl">
                     <img src="assets/Lobby4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover" alt="Main Lobby">
@@ -231,11 +231,10 @@
                 </div>
             </div>
 
-            <!-- Layout 2: HORIZONTAL SCROLLING STRIP -->
+            <!-- Horizontal Scrolling Strip -->
             <div class="relative group">
                 <h3 class="text-forest font-serif italic text-2xl mb-6 ml-2 uppercase tracking-widest text-sm font-bold opacity-60">Explore More</h3>
                 
-                <!-- Nav Buttons -->
                 <button onclick="scrollGallery(-400)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-3 rounded-full shadow-xl text-forest hover:bg-gold hover:text-white transition-all -ml-5 opacity-0 group-hover:opacity-100 hidden md:block">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -247,62 +246,29 @@
                     </svg>
                 </button>
 
-                <!-- Scroll Container -->
                 <div id="scrollContainer" class="flex gap-4 overflow-x-auto no-scrollbar snap-x gallery-container">
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/outside.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/outside1.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/outsidenight.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/7.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/10.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/11.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/12.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/14.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/15.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/17.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/19.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/22.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/conferenceroom-min.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/Lobby2.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
-                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg">
-                        <img src="assets/Lobby3.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover">
-                    </div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/outside.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/outside1.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/4.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/outsidenight.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/7.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/10.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/11.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/12.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/14.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/15.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/17.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/19.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/22.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/conferenceroom-min.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/Lobby2.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
+                    <div class="snap-center flex-shrink-0 w-64 md:w-80 h-52 overflow-hidden rounded-xl shadow-lg"><img src="assets/Lobby3.jpg" onclick="openModal(this.src)" class="w-full h-full object-cover"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Convenient Access (Restored Section) -->
+    <!-- Convenient Access Section -->
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -347,7 +313,161 @@
         </div>
     </section>
 
-    <!-- Direct Booking Section (Restored) -->
+    <!-- NEW REVIEWS SECTION -->
+    <section id="reviews" class="py-24 bg-sage/30">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold font-bold tracking-[0.3em] uppercase text-xs">Guest Experiences</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-forest mt-2">What Our Guests Say</h2>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Review 1: Jayme Bowman -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-forest/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-gold">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 font-serif">
+                            "For the price it is great. The rooms are clean and quiet. That's all I needed on this trip. :) It felt safe, with interior rooms and security cameras. Rooms are basic, microwave and refrigerator was a nice bonus."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 bg-forest/10 rounded-full flex items-center justify-center font-bold text-forest">JB</div>
+                        <div>
+                            <p class="font-bold text-forest text-sm">Jayme Bowman</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Couple • via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2: Megan Draley -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-forest/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-gold">
+                            <!-- SVG Stars Repeat -->
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 font-serif">
+                            "Exceeded my expectations. The housekeeping team did an outstanding job keeping everything spotless. Paul, the front desk manager, was attentive and one of the kindest people I’ve met. Truly homey atmosphere."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 bg-forest/10 rounded-full flex items-center justify-center font-bold text-forest">MD</div>
+                        <div>
+                            <p class="font-bold text-forest text-sm">Megan Draley</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3: Cassidy D -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-forest/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-gold">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 font-serif">
+                            "The minute you walk in or call for a room, you're greeted by friendly people who really care. The rooms are super clean, the beds are so comfortable, and the entire building is absolutely beautiful!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 bg-forest/10 rounded-full flex items-center justify-center font-bold text-forest">CD</div>
+                        <div>
+                            <p class="font-bold text-forest text-sm">Cassidy D.</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Family • via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4: William Rodriguez -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-forest/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-gold">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 font-serif">
+                            "From front desk service to cleanliness, we found this hotel fantastic! We were upgraded due to availability. Very quiet, beds were very comfortable as well. 5 minutes from our destination. Will use again!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 bg-forest/10 rounded-full flex items-center justify-center font-bold text-forest">WR</div>
+                        <div>
+                            <p class="font-bold text-forest text-sm">William Rodriguez</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Business • via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5: Amanda Holland -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-forest/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-gold">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 font-serif">
+                            "You can’t beat the price and location. Lots of restaurants nearby. The staff is great and the entire place is so clean! Absolutely would stay here again and highly recommend."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 bg-forest/10 rounded-full flex items-center justify-center font-bold text-forest">AH</div>
+                        <div>
+                            <p class="font-bold text-forest text-sm">Amanda Holland</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6: Joseph Perez -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-forest/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-gold">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 font-serif">
+                            "By far beats out the other hotels. Rooms are big, very clean, staff super helpful. The manager makes you feel like family. 100% worth it."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 bg-forest/10 rounded-full flex items-center justify-center font-bold text-forest">JP</div>
+                        <div>
+                            <p class="font-bold text-forest text-sm">Joseph Perez</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserve Stay Section -->
     <section class="py-24 bg-gold text-forest text-center px-4">
         <h2 class="text-4xl md:text-6xl font-bold mb-6 italic font-serif text-white">Reserve Your Stay</h2>
         <p class="text-sm font-bold tracking-[0.3em] uppercase mb-12 text-forest">Direct rates available via phone</p>
@@ -390,7 +510,7 @@
         </p>
     </footer>
 
-    <!-- Image Modal (Lightbox) -->
+    <!-- Image Modal -->
     <div id="imageModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 cursor-zoom-out" onclick="closeModal()">
         <button class="absolute top-6 right-6 text-white text-5xl hover:text-gold transition-colors" onclick="closeModal()">&times;</button>
         <img id="modalImg" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-4 border-white/10 cursor-default" onclick="event.stopPropagation()">
